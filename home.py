@@ -45,7 +45,7 @@ def get_last_patient_number():
 def is_image_blurred(image_path):
     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     variance_of_laplacian = cv2.Laplacian(image, cv2.CV_64F).var()
-    return variance_of_laplacian < 75  # Adjust threshold as necessary
+    return variance_of_laplacian < 40  # Adjust threshold as necessary
 
 @app.route('/')
 def home():
